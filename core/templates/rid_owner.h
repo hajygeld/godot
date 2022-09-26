@@ -350,7 +350,7 @@ public:
 				if (validator & 0x80000000) {
 					continue; //uninitialized
 				}
-				if (validator != 0xFFFFFFFF) {
+				if (chunks != nullptr && validator != 0xFFFFFFFF) {
 					chunks[i / elements_in_chunk][i % elements_in_chunk].~T();
 				}
 			}
